@@ -1,0 +1,53 @@
+<script src="./securityquestion.js"></script>
+<div class="container">
+  <div class="header"></div>
+  <div class="maskgroup">
+    <img src="../../assets/img/alterna_savings_logo.png" class="alterna_savings_logo">
+    <div class="frame20">
+      <p class="frametext1">Great, let's keep going | </p><p class="frametext2">Before we register you for online banking, we need to verify your account....</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1">
+      <div class="pagenation0102"></div>
+      <div class="menus">
+        <a routerLink="/securityquestion" class="Securityquestion_link">Security Question</a>
+        <a routerLink="/setuppassword" class="Setuppasword_link">Setup Password</a>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="Account-check">
+        <p class="col2_text">Setup Security Question...</p>
+        <div class="Frame17">
+          <div class="inputtext">
+            <form id="security-form">
+              <label for="Security Question"></label>
+              <select name="Securityquestion" class="Security-questions">
+                <option value="" disable selected>Select Any Question 01</option>
+                <option value="born City">In what city were Born?</option>
+                <option value="favorite pet">What is the name of your favorite pet?</option>
+                <option value="Spouse">In what City did you meet your Spouse?</option>
+              </select><br>
+
+              <input type="text" class="Security-response" placeholder="">
+
+              <label for="Security Question"></label>
+              <select name="Securityquestion" class="Security-questions">
+                <option value="" disable selected>Select Any Question 02</option>
+                <option value="born City">What is Your Mother's Maiden Name?</option>
+                <option value="Childhood Nickname">What was your childhood nickname?</option>
+                <option value="Childhood Friend">What is the name of your favorite childhood friend?</option>
+              </select><br>
+              <input type="text" class="Security-response" placeholder=""><br>
+              <button class="continuebtn" (click)="onContinue()">continue</button>
+
+            </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p class="footertext1">&copy;Alterna Savings. All rights reserved</p> <p class="footertext2">Security | Privacy policy | Terms & Conditions</p>
+      </div>

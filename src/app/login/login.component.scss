@@ -1,0 +1,163 @@
+// * {
+//   @media all and (max-width: 300px) {
+//     background-color: blue;
+
+//   }
+// }
+.mat-typography {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  isolation: isolate;
+  background: url('../../assets/img/bg_images.png');
+  background-size: cover;
+
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  border-radius: 10px;
+
+}
+
+.wrapper {
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  // justify-content: center;
+  // align-items: center;
+  padding: 64px;
+  isolation: isolate;
+
+  position: absolute;
+  width: 1440px;
+  height: 1024px;
+  left: -14px;
+  top: 5px;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  z-index: 1;
+}
+
+.rectangle1 {
+  width: 656px;
+  height: 896px;
+  margin-left: 16px;
+
+  background: url('../../assets/img/Rectangle\ 1.png');
+  background-repeat: no-repeat;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  z-index: 0;
+}
+
+.bg-white {
+  position: absolute;
+  width: 656px;
+  height: 896px;
+  left: 736px;
+  top: 64px;
+
+  background: #FFFFFF;
+}
+
+.login_cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+
+  //position: relative;
+  margin: 170px 100px 170px 100px;
+  width: fit-content;
+  height: fit-content;
+  left: calc(50% - 414px/2 + 328px);
+  top: calc(50% - 493.27px/2);
+
+  background: #F4F5F6;
+  border-radius: 20px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 4px;
+
+  position: relative;
+  margin:auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+
+
+input {
+  width: 330px;
+  padding: 18px 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.loginbtn {
+  width: 100%;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 18px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.registerbtn {
+  width: 100%;
+  background-color: #68737A;
+  border: none;
+  color: white;
+  padding: 18px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.loginbtn:hover {
+  background-color: #0e0f0f;
+}
+
+.registerbtn:hover {
+  background-color: #0e0f0f;
+
+}

@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="header"></div>
+  <div class="maskgroup">
+    <img src="../../assets/img/alterna_savings_logo.png" class="alterna_savings_logo">
+    <div class="frame20">
+      <p class="frametext1">Great, let's keep going | </p><p class="frametext2">Before we register you for online banking, we need to verify your account....</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1">
+      <div class="pagenation2"></div>
+      <div class="menus">
+        <a routerLink="/account-details" class="Accountdetails_link">Account details</a>
+        <a routerLink="/personal-details" class="personaldetails_link">Personal details</a>
+      </div>
+    </div>
+    <div class="col-2">
+      <div class="Account-check">
+        <p class="col2_text">Lets get started, give us your details below...</p>
+        <div class="Frame17">
+          <div class="inputtext">
+            <form id="name_IDNo">
+              <label for="Phonenumber"></label>
+              <input type="text" class="Phonenumber" placeholder="Phone number">
+
+              <label for="Confirm_Phonenumber"></label>
+              <input type="text" class="confirm_Phonenumber" placeholder="Confirm Phone number">
+
+              <label for="email"></label>
+              <input type="email" class="mail" placeholder="Email">
+            </form>
+              <button class="continuebtn" (click)="oncontinue()">continue</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p class="footertext1">&copy;Alterna Savings. All rights reserved</p> <p class="footertext2">Security | Privacy policy | Terms & Conditions</p>
+      </div>
+    </div>
