@@ -433,26 +433,35 @@ html, body {
 }
 
 .footer {
-  /* Footer */
-
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
-  background: #EBEBEB;
-  padding: 16px 64px;
-
-  /* Inside auto layout */
+  right: 0;
+  height: 50px;
+  background-color: #EBEBEB;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-footertext1 {
+.footertext1 {
+  width: 264px;
+  height: 20px;
+
   font-family: 'Arimo';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  /* identical to box height, or 125% */
+
+
   color: #201F20;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }

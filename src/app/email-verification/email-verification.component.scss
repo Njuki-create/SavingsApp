@@ -38,7 +38,7 @@
   padding: 0px;
   margin-top: 40px;
   width: 1440px;
-  height: 500px;
+  height: 100%;
 
 
   /* Inside auto layout */
@@ -46,15 +46,8 @@
   flex: none;
   order: 1;
   align-self: stretch;
-  flex-grow: 0;
+  flex-grow: 1;
   z-index: 1;
-}
-
-@media screen and (max-width: 500px) {
-  .row {
-    display: flex;
-    flex-direction: column-reverse;
-  }
 }
 
 .col-md-4 {
@@ -87,7 +80,31 @@
 
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (max-width: 600px) {
+  .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .col-md-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+
+  width: 1440px;
+  height: 750px;
+
+  /* faulu/colors/cultured */
+
+  background: #F9F9F9;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+  }
 
 }
 
@@ -214,4 +231,39 @@
   align-self: stretch;
   flex-grow: 0;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #EBEBEB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footertext1 {
+  width: 264px;
+  height: 20px;
+
+  font-family: 'Arimo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+
+  color: #201F20;
+
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
 
