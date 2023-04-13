@@ -22,7 +22,7 @@ export class LoginComponent {
   };
   loginObj = {
     phonenumber: '',
-    pin: ''
+    pin: '',
   }
 
   ngOnInit(): void {
