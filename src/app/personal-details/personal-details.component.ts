@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { PersonalDetailsService } from '../services/personal-details.service';
+import { AccountdetailsService } from '../services/accountdetails.service';
+import { SignupResponse } from '../interfaces/signup-response';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-personal-details',
@@ -8,10 +11,49 @@ import { Router } from '@angular/router';
   styleUrls: ['./personal-details.component.scss']
 })
 export class PersonalDetailsComponent {
-  constructor (private router: Router) {
 
-  }
-  oncontinue() {
+  fullName: string;
+  nationalId: string;
+  dob: string;
+  gender: string;
+  phoneNumber: string;
+  confirmPhoneNumber: string;
+  email: string;
+
+  constructor(private router: Router, private service: PersonalDetailsService, private accountsDetails: AccountdetailsService, private Sharedservice: SharedService) {}
+
+  onContinue() {
+
+      // creating an object to store user registration data
+    const postData = {
+      fullName: this.fullName,
+      nationalId: this.nationalId,
+      dob: this.dob,
+      gender: this.gender,
+      phoneNumber: this.phoneNumber,
+      confirmPhoneNumber: this.confirmPhoneNumber,
+      email: this.email,
+    };
+
+    this.Sharedservice.changeEmail(this.email);
+    this.service.postData(postData).subscribe((response: SignupResponse) => {
+      console.log(response.message); //display response message from server to the user
+
+      // create a JSON object from the users Information
+      const userJson = {
+        fullname: response.data.fullName,
+        nationalId: response.data.nationalId,
+        dob: response.data.dob,
+        gender: response.data.gender,
+        phoneNumber: response.data.phoneNumber,
+        confirmPhoneNumber: response.data.confirmPhoneNumber,
+      };
+
+      console.log(userJson); // display the JSON object to the console
+
+    });
+
     this.router.navigate(['/email-verification']);
+
   }
 }

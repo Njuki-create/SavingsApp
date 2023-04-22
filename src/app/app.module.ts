@@ -13,6 +13,10 @@ import { PersonalDetailsComponent } from './personal-details/personal-details.co
 import { SecurityquestionComponent } from './securityquestion/securityquestion.component';
 import { SetuppasswordComponent } from './setuppassword/setuppassword.component';
 import { EmailVerificationComponent } from './email-verification/email-verification.component';
+import { PortalComponent } from './portal/portal.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AboutComponent } from './about/about.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { EmailVerificationComponent } from './email-verification/email-verificat
     SecurityquestionComponent,
     SetuppasswordComponent,
     EmailVerificationComponent,
+    PortalComponent,
+    ContactusComponent,
+    AboutComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

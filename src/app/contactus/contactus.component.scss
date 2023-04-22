@@ -1,0 +1,28 @@
+.container {
+  margin-top: 0px;
+  height: auto;
+}
+
+.navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.navbar-collapse {
+  background-image: url('../../assets/img/Mask\ group.png');
+}
+
+.row.no-gutters {
+
+}
+
+.col-lg-4.col-md-5.d-flex.align-items-stretch {
+  background-color: orange;
+  box-sizing: border-box;
+}
+
+.col {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.collapse.navbar-collapse {
+  display: flex;
+  flex: auto;
+  flex-direction: row-reverse;
+}

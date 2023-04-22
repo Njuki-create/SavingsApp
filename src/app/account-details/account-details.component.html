@@ -1,55 +1,67 @@
-<div class="container">
-  <div class="header"></div>
-  <div class="maskgroup">
-    <img src="../../assets/img/alterna_savings_logo.png" class="alterna_savings_logo">
-    <div class="frame20">
-      <p class="frametext1">Great, let's keep going | </p><p class="frametext2">Before we register you for online banking, we need to verify your account....</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-1">
-      <div class="pagenation"></div>
-      <div class="menus">
-        <a routerLink="/account-details" class="Accountdetails_link">Account details</a>
-        <a routerLink="/personal-details" class="personaldetails_link">Personal details</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <div class="container">
+    <div class="header"></div>
+    <div class="maskgroup">
+      <img src="../../assets/img/alterna_savings_logo.png" class="alterna_savings_logo">
+      <div class="frame20">
+        <p class="frametext1">Great, let's keep going | </p><p class="frametext2">Before we register you for online banking, we need to verify your account....</p>
       </div>
     </div>
-    <div class="col-2">
-      <div class="Account-check">
-        <p class="col2_text">Lets get started, give us your details below...</p>
-        <div class="Frame17">
-          <div class="inputtext">
-            <form id="name_IDNo">
-              <label for="Fullname"></label>
-              <input type="text" class="Fullname" placeholder="Full name">
+    <div class="row">
+      <div class="col-1">
+        <div class="pagenation"></div>
+        <div class="menus">
+          <a routerLink="/account-details" class="Accountdetails_link">Account details</a>
+          <a routerLink="/personal-details" class="personaldetails_link">Personal details</a>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="Account-check">
+          <p class="col2_text">Lets get started, give us your details below...</p>
+          <div class="Frame17">
+            <div class="inputtext">
+              <form #AccountDetailsForm="ngForm" (ngSubmit)="onContinue()">
+                <label for="Fullname"></label>
+                <input type="text" class="Fullname" name="fullName" placeholder="Full name" [(ngModel)]="fullName">
 
-              <label for="National_ID_Number"></label>
-              <input type="text" class="National_ID_Number" placeholder="National ID Number"><br>
-            </form>
+                <label for="National_ID_Number"></label>
+                <input type="text" class="National_ID_Number"  name="nationalId" placeholder="National ID Number" [(ngModel)]="nationalId"><br>
+              </form>
 
-            <div class="row2">
-                <form id="registration" method="post">
-                  <label for="DateofBirth"></label>
-                  <input type="text" class="DateofBirth" placeholder="DateofBirth" onfocus="(this.type='date')" onblur="(this.type='text')" id="date">
-                </form>
-
-                  <form id="registration" method="post">
-                    <label for="Gender"></label>
-                    <select placeholder="Select Gender" name="Gender-selection" class="Gender-selection">
-                      <option value="" disabled selected>Select Gender</option>
-                      <option value="Male">Male</option>
-                      <option value="Female">Female</option>
-                      <option value="Rather not say">Rather not say</option>
-                    </select>
+              <div class="row2">
+                  <form #AccountDetailsForm="ngForm" (ngSubmit)="onContinue()" method="post">
+                    <label for="DateofBirth"></label>
+                    <input type="text" class="DateofBirth" name="dob" placeholder="DateofBirth" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" [(ngModel)]="dob">
                   </form>
+
+                    <form #AccountDetailsForm="ngForm" (ngSubmit)="onContinue()" id="registration" method="post">
+                      <label for="Gender"></label>
+                      <select placeholder="Select Gender" name="gender" class="Gender-selection" [(ngModel)]="gender">
+                        <option value="" disabled selected>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Rather not say">Rather not say</option>
+                      </select>
+                    </form>
+                  </div>
                 </div>
+                <button class="continuebtn" name="account-details" (click)="onContinue()">continue</button>
               </div>
-              <button class="continuebtn" (click)="onContinue()">continue</button>
             </div>
           </div>
         </div>
+        <div class="footer">
+          <p class="footertext1">&copy;Alterna Savings. All rights reserved</p> <p class="footertext2">Security | Privacy policy | Terms & Conditions</p>
+        </div>
       </div>
-      <div class="footer">
-        <p class="footertext1">&copy;Alterna Savings. All rights reserved</p> <p class="footertext2">Security | Privacy policy | Terms & Conditions</p>
-      </div>
-    </div>
+
+</body>
+</html>

@@ -19,17 +19,17 @@
         <p class="col2_text">Lets get started, give us your details below...</p>
         <div class="Frame17">
           <div class="inputtext">
-            <form id="name_IDNo">
+            <form #personalDetailsForm="ngForm" (ngSubmit)="onContinue()">
               <label for="Phonenumber"></label>
-              <input type="text" class="Phonenumber" placeholder="Phone number">
+              <input type="text" class="Phonenumber" name="phoneNumber" placeholder="Phone number" [(ngModel)]="phoneNumber">
 
               <label for="Confirm_Phonenumber"></label>
-              <input type="text" class="confirm_Phonenumber" placeholder="Confirm Phone number">
+              <input type="text" name="confirmPhoneNumber" class="confirm_Phonenumber" placeholder="Confirm Phone number" [(ngModel)]="confirmPhoneNumber">
 
               <label for="email"></label>
-              <input type="email" class="mail" placeholder="Email">
+              <input type="email" class="mail" name="email" placeholder="Email" [(ngModel)]="email">
             </form>
-              <button class="continuebtn" (click)="oncontinue()">continue</button>
+              <button class="continuebtn" name="personal-details" (click)="onContinue()">continue</button>
             </div>
           </div>
         </div>

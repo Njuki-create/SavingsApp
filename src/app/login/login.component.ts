@@ -53,6 +53,7 @@ export class LoginComponent {
     if(isUserExist != undefined) {
       alert('User Logged in Successfully');
     }
+    // this.router.navigate(['/'])
     else {
       alert('Wrong Credentials');
     }

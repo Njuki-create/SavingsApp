@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-collapse">
+    <div class="container container-fluid">
+      <a class="navbar-brand" href="#"><img src="../../assets/img/alterna_savings_logo.png"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/portal">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contactus">Contact us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+    <section class="ftco-section">
+    <div class="container">
+    <div class="row justify-content-center">
+    <div class="col-md-6 text-center mb-5">
+    <h2 class="heading-section"></h2>
+    </div>
+    </div>
+    <div class="row justify-content-center">
+    <div class="col-md-12">
+    <div class="wrapper">
+    <div class="row no-gutters">
+    <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+    <div class="contact-wrap w-100 p-md-5 p-4">
+    <h3 class="mb-4">Contact us</h3>
+    <div id="form-message-warning" class="mb-4"></div>
+
+    <form method="POST" id="contactForm" name="contactForm" class="contactForm" novalidate="novalidate">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="form-group">
+    <label class="label" for="name">Full Name</label>
+    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="form-group">
+    <label class="label" for="email">Email Address</label>
+    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+    </div>
+    </div>
+    <div class="col-md-12">
+    <div class="form-group">
+    <label class="label" for="subject">Subject</label>
+    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+    </div>
+    </div>
+    <div class="col-md-12">
+    <div class="form-group">
+    <label class="label" for="#">Message</label>
+    <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea><br>
+    </div>
+    </div>
+    <div class="col-md-12">
+    <div class="form-group">
+      <button class="btn btn-outline-warning" (click)="onSubmit()">Send Message</button>
+    <div class="submitting"></div>
+    </div>
+    </div>
+    </div>
+    </form>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+    <div class="info-wrap w-100 p-md-5 p-4">
+    <h3>Let's get in touch</h3>
+    <p class="mb-4">We're open for any suggestion or just to have a chat</p>
+    <div class="dbox w-100 d-flex align-items-start">
+    <div class="icon d-flex align-items-center justify-content-center">
+    <span class="fa fa-map-marker"></span>
+    </div>
+    <div class="text pl-3">
+    <p><img src="../../assets/img/map-pin.svg" class="img map-img"><span class="Address">Address:</span> Off Airport North Rd 53579-00200 City Square, Nairobi, Kenya</p>
+    </div>
+    </div>
+    <div class="dbox w-100 d-flex align-items-center">
+    <div class="icon d-flex align-items-center justify-content-center">
+    <span class="fa fa-phone"></span>
+    </div>
+    <div class="text pl-3">
+    <p><img src="../../assets/img/telephone-fill.svg" class="img telephone-img"><span>Phone:</span> <a href="tel://0720020020" target="_blank">+ 25472002020</a></p>
+    </div>
+    </div>
+    <div class="dbox w-100 d-flex align-items-center">
+    <div class="icon d-flex align-items-center justify-content-center">
+    <span class="fa fa-paper-plane"></span>
+    </div>
+    <div class="text pl-3">
+    <p><img src="../../assets/img/telegram.svg" class="img telegram-image"><span>Email:</span> <a href="mailto:info@alternasavings.com" target="_blank">info@alternasavings.com</a></p>
+    </div>
+    </div>
+    <div class="dbox w-100 d-flex align-items-center">
+    <div class="icon d-flex align-items-center justify-content-center">
+    <span class="fa fa-globe"></span>
+    </div>
+    <div class="text pl-3">
+    <p><img src="../../assets/img/globe-asia-australia.svg" class="img globe-img"><span>Website</span> <a href="#" target="_blank">alternasavings.com</a></p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section><br><br>
+    <footer class="bg-light pb-5">
+      <div class="container text-center">
+        <p class="font-italic text-muted mb-0">&copy; Copyrights alternasavings.com All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+    <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v2b4487d741ca48dcbadcaf954e159fc61680799950996" integrity="sha512-D/jdE0CypeVxFadTejKGTzmwyV10c1pxZk/AqjJuZbaJwGMyNHY3q/mTPWqMUnFACfCTunhZUVcd4cV78dK1pQ==" data-cf-beacon="{&quot;rayId&quot;:&quot;7b98114328bfcb87&quot;,&quot;token&quot;:&quot;cd0b4b3a733644fc843ef0b185f98241&quot;,&quot;version&quot;:&quot;2023.3.0&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
+
+<!-- Add Bootstrap JS and jQuery links -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
