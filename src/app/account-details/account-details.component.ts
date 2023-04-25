@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountdetailsService } from '../services/accountdetails.service';
 import { SignupResponse } from '../interfaces/signup-response';
+import { PersonalDetailsService } from '../services/personal-details.service';
 
 @Component({
   selector: 'app-account-details',
@@ -16,7 +17,10 @@ export class AccountDetailsComponent implements OnInit {
   dob: string;
   gender: string;
 
-  constructor(private router: Router, private service: AccountdetailsService) {}
+  constructor(private router: Router,
+    private service: AccountdetailsService,
+    private accountDetailsService: AccountdetailsService
+    ) {}
 
   ngOnInit(): void {
     // this.service.getData().subscribe(Data => {
@@ -33,20 +37,22 @@ export class AccountDetailsComponent implements OnInit {
       gender: this.gender,
     };
 
-    this.service.postDatas(postData).subscribe((response: SignupResponse) => {
-      console.log(response.message); // display the response message from the server to the user
+    this.accountDetailsService.updateFormDetails(postData);
 
-      // create a JSON object from the user's information
-      const userJson = {
-        id: response.data.id,
-        fullName: response.data.fullName,
-        nationalId: response.data.nationalId,
-        dob: response.data.dob,
-        gender: response.data.gender,
-      };
+    // this.service.postDatas(postData).subscribe((response: SignupResponse) => {
+    //   console.log(response.message); // display the response message from the server to the user
 
-      console.log(userJson); // display the JSON object to the console
-    });
+    //   // create a JSON object from the user's information
+    //   const userJson = {
+    //     id: response.data.id,
+    //     fullName: response.data.fullName,
+    //     nationalId: response.data.nationalId,
+    //     dob: response.data.dob,
+    //     gender: response.data.gender,
+    //   };
+
+    //   console.log(userJson); // display the JSON object to the console
+    // });
 
     this.router.navigate(['/personal-details']);
   }

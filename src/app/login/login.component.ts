@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 
 @Component({
@@ -18,11 +19,13 @@ export class LoginComponent {
     NationalIDnumber: '',
     DateofBirth: '',
     Gender: '',
+    phoneNumber: '',
     email: '',
+
   };
   loginObj = {
-    phonenumber: '',
-    pin: '',
+    phoneNumber: '',
+    email: '',
   }
 
   ngOnInit(): void {
@@ -44,12 +47,14 @@ export class LoginComponent {
       DateofBirth: '',
       Gender: '',
       email: '',
+      phoneNumber: '',
+
     };
   }
 
   onLogin() {
     debugger
-    const isUserExist=this.signupUsers.find(m => m.phonenumber == this.loginObj.phonenumber && m.pin == this.loginObj.pin);
+    const isUserExist=this.signupUsers.find(m => m.phonenumber == this.loginObj.phoneNumber && m.pin == this.loginObj.email);
     if(isUserExist != undefined) {
       alert('User Logged in Successfully');
     }

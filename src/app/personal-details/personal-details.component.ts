@@ -19,13 +19,23 @@ export class PersonalDetailsComponent {
   phoneNumber: string;
   confirmPhoneNumber: string;
   email: string;
+  previousFormDetails: {};
 
-  constructor(private router: Router, private service: PersonalDetailsService, private accountsDetails: AccountdetailsService, private Sharedservice: SharedService) {}
+  constructor(private router: Router,
+    private service: PersonalDetailsService,
+    private accountsDetails: AccountdetailsService,
+    private Sharedservice: SharedService) {
+
+      this.accountsDetails.loginFormObservable.subscribe(item =>
+        this.previousFormDetails = item
+      )
+
+    }
 
   onContinue() {
 
       // creating an object to store user registration data
-    const postData = {
+    let postData = {
       fullName: this.fullName,
       nationalId: this.nationalId,
       dob: this.dob,
@@ -34,6 +44,12 @@ export class PersonalDetailsComponent {
       confirmPhoneNumber: this.confirmPhoneNumber,
       email: this.email,
     };
+
+    postData = {...postData, ...this.previousFormDetails}
+
+    console.log('postData');
+    console.log(postData);
+
 
     this.Sharedservice.changeEmail(this.email);
     this.service.postData(postData).subscribe((response: SignupResponse) => {
