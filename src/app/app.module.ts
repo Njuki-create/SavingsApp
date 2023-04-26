@@ -23,8 +23,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { HeaderComponent } from './header/header.component';
+import { SendmoneyComponent } from './sendmoney/sendmoney.component';
+import { RequestmoneyComponent } from './requestmoney/requestmoney.component';
+import { ExpensetrackerComponent } from './expensetracker/expensetracker.component';
+import { BudgettrackerComponent } from './budgettracker/budgettracker.component';
 
 @NgModule({
   declarations: [
@@ -40,8 +42,10 @@ import { HeaderComponent } from './header/header.component';
     ContactusComponent,
     AboutComponent,
     DashboardComponent,
-    SidenavComponent,
-    HeaderComponent,
+    SendmoneyComponent,
+    RequestmoneyComponent,
+    ExpensetrackerComponent,
+    BudgettrackerComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +53,7 @@ import { HeaderComponent } from './header/header.component';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
 
     // * MATERIAL IMPORTS
     MatSidenavModule,

@@ -28,20 +28,20 @@
           <p class="col2_text">Lets get started, give us your details below...</p>
           <div class="Frame17">
 
-            
+
             <div class="inputtext">
               <form #AccountDetailsForm="ngForm" (ngSubmit)="onContinue()">
                 <label for="Fullname"></label>
                 <input type="text" class="Fullname" name="fullName" placeholder="Full name" [(ngModel)]="fullName">
 
                 <label for="National_ID_Number"></label>
-                <input type="text" class="National_ID_Number"  name="nationalId" placeholder="National ID Number" [(ngModel)]="nationalId"><br>
+                <input type="text" class="National_ID_Number"  name="nationalId" placeholder="National ID Number" [(ngModel)]="idNumber"><br>
               </form>
 
               <div class="row2">
                   <form #AccountDetailsForm="ngForm" (ngSubmit)="onContinue()" method="post">
                     <label for="DateofBirth"></label>
-                    <input type="text" class="DateofBirth" name="dob" placeholder="DateofBirth" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" [(ngModel)]="dob">
+                    <input type="text" class="DateofBirth" name="dob" placeholder="DateofBirth" onfocus="(this.type='date')" onblur="(this.type='text')" id="date" [(ngModel)]="dateOfBirth">
                   </form>
 
                     <form #AccountDetailsForm="ngForm" (ngSubmit)="onContinue()" id="registration" method="post">

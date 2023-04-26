@@ -1,0 +1,25 @@
+body {
+  background-color: #fff;
+}
+.container {
+  margin-top: 50px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px #ddd;
+}
+h2 {
+  color: #ff6700;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.btn-primary {
+  background-color: #ff6700;
+  border-color: #ff6700;
+  font-weight: 700;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #f55d00;
+  border-color: #f55d00;
+}

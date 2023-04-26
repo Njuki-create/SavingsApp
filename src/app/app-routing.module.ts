@@ -10,6 +10,10 @@ import { PortalComponent } from './portal/portal.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutComponent } from './about/about.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { SendmoneyComponent } from './sendmoney/sendmoney.component';
+import { RequestmoneyComponent } from './requestmoney/requestmoney.component';
+import { ExpensetrackerComponent } from './expensetracker/expensetracker.component';
+import { BudgettrackerComponent } from './budgettracker/budgettracker.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -18,6 +22,10 @@ const routes: Routes = [
   {path: 'contactus', component: ContactusComponent},
   {path: 'about', component: AboutComponent},
   {path: 'dashboard', component: DashboardComponent},
+  {path: 'sendmoney', component: SendmoneyComponent},
+  {path: 'requestmoney', component: RequestmoneyComponent},
+  {path: 'expensetracker', component: ExpensetrackerComponent},
+  {path: 'budgettracker', component: BudgettrackerComponent},
   { path: 'account-details', component: AccountDetailsComponent },
   { path: 'personal-details', component: PersonalDetailsComponent },
   {path: 'securityquestion', component: SecurityquestionComponent},

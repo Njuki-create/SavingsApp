@@ -13,8 +13,8 @@ export class AccountDetailsComponent implements OnInit {
   data: any = [];
 
   fullName: string;
-  nationalId: string;
-  dob: string;
+  idNumber: string;
+  dateOfBirth: string;
   gender: string;
 
   constructor(private router: Router,
@@ -23,20 +23,18 @@ export class AccountDetailsComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
-    // this.service.getData().subscribe(Data => {
-    //   this.data = Data;
-    //   console.warn(Data);
-    // })
+
   }
 
   onContinue() {
     const postData = {
       fullName: this.fullName,
-      nationalId: this.nationalId,
-      dob: this.dob,
+      idNumber: this.idNumber,
+      dateOfBirth: this.dateOfBirth,
       gender: this.gender,
     };
 
+    // updates the behavior subject with details from the accountDetails component.
     this.accountDetailsService.updateFormDetails(postData);
 
     // this.service.postDatas(postData).subscribe((response: SignupResponse) => {

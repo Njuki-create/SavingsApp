@@ -1,13 +1,46 @@
+* {
+  font-family: 'Roboto Slab', serif;
+}
+
 .navbar.sticky-top.navbar-expand-lg.navbar-light.bg-light.navbar-collapse {
   background-image: url('../../assets/img/Mask\ group.png');
 }
 
 .row {
-  background-color: #F7931D;
+  // background-color: #F7931D;
   display: flex;
   text-align: center;
 }
+section.u-image:not(.u-hover-box), .u-sheet.u-image:not(.u-hover-box), .u-group.u-image:not(.u-hover-box), .u-layout-cell.u-image:not(.u-hover-box) {
+    overflow: visible;
+}
 
+.u-section-2 .u-layout-wrap-1 {
+    width: calc(((100% - 1140px) / 2) + 1140px);
+    margin: 0 0 0 auto;
+}
 
+.u-layout-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: -webkit-fit-content;
+    min-height: fit-content;
+    max-width: 100%;
+}
+.btn.btn-dark.col-3.offset-5{
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+.btn.p-2.w-auto {
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-top: 50px;
+  background-color: black;
+  color: white;
+}
 
 

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
-
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +9,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constructor(private router: Router){
+  constructor(private router: Router, private Loginservice: LoginService){
   }
   //creating an array to store users
   signupUsers: any[] =[];
@@ -53,14 +53,26 @@ export class LoginComponent {
   }
 
   onLogin() {
-    debugger
-    const isUserExist=this.signupUsers.find(m => m.phonenumber == this.loginObj.phoneNumber && m.pin == this.loginObj.email);
-    if(isUserExist != undefined) {
-      alert('User Logged in Successfully');
-    }
-    // this.router.navigate(['/'])
-    else {
-      alert('Wrong Credentials');
-    }
+    this.Loginservice.postData(this.loginObj).subscribe(
+      (response: any) => {
+        if (!response.success) {
+          alert('Invalid Details');
+          return;
+        }
+
+        const { email, phoneNumber } = response;
+        if (email !== this.loginObj.email || phoneNumber !== this.loginObj.phoneNumber) {
+          alert('Invalid Login');
+          return;
+        }
+
+        this.router.navigate(['/dashboard']);
+      },
+      (error: any) => {
+        console.error(error);
+        alert('An error occurred while logging in. Please try again later.');
+      }
+    );
   }
+
 }
