@@ -36,22 +36,6 @@ export class AccountDetailsComponent implements OnInit {
 
     // updates the behavior subject with details from the accountDetails component.
     this.accountDetailsService.updateFormDetails(postData);
-
-    // this.service.postDatas(postData).subscribe((response: SignupResponse) => {
-    //   console.log(response.message); // display the response message from the server to the user
-
-    //   // create a JSON object from the user's information
-    //   const userJson = {
-    //     id: response.data.id,
-    //     fullName: response.data.fullName,
-    //     nationalId: response.data.nationalId,
-    //     dob: response.data.dob,
-    //     gender: response.data.gender,
-    //   };
-
-    //   console.log(userJson); // display the JSON object to the console
-    // });
-
     this.router.navigate(['/personal-details']);
   }
   }

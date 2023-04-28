@@ -1,82 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Fontawesome link -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-  <title></title>
+    <title></title>
 
-  <!-- Add Bootstrap CSS link -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-
-</head>
-<body>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-collapse">
+    <!-- Add Bootstrap CSS link -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-collapse"
+    >
       <div class="container container-fluid">
-        <a class="navbar-brand" href="#"><img src="../../assets/img/alterna_savings_logo.png"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/portal">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/dashboard">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/about">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contactus">Contact us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/login">Login</a>
-          </li>
-        </ul>
-      </div>
+        <a class="navbar-brand" href="#"
+          ><img src="../../assets/img/alterna_savings_logo.png"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/portal">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/about">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/contactus">Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
-    <section class="u-clearfix u-image u-section-2" id="carousel_84ba" data-image-width="1980" data-image-height="1141">
+    <section
+      class="u-clearfix u-image u-section-2"
+      id="carousel_84ba"
+      data-image-width="1980"
+      data-image-height="1141"
+    >
       <div class="row h-100 align-items-center py-5">
         <div class="col-lg-6">
           <h1 class="display-4">Who we are</h1>
-          <h2 class="lead text-muted mb-0">We are a savings platform dedicated to helping our clients attain financial stability through saving and investing. Get started below to join our team and attain financial stability</h2><br>
-          <button class="btn p-2 w-auto offset-5" (click)="GetStarted()">Get started</button>
+          <h2 class="lead text-muted mb-0">
+            We are a savings platform dedicated to helping our clients attain
+            financial stability through saving and investing. Get started below
+            to join our team and attain financial stability
+          </h2>
+          <br />
+          <button class="btn p-2 w-auto offset-5" (click)="GetStarted()">
+            Get started
+          </button>
         </div>
-        <div class="col-lg-6 d-none d-lg-block"><img src="../../assets/img/josh-appel-NeTPASr-bmQ-unsplash.jpg" alt="" class="img-fluid w-100"></div>
+        <div class="col-lg-6 d-none d-lg-block">
+          <img
+            src="../../assets/img/josh-appel-NeTPASr-bmQ-unsplash.jpg"
+            alt=""
+            class="img-fluid w-100"
+          />
+        </div>
       </div>
 
       <!-- Carousel -->
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
         </div>
 
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="../../assets/img/miles-burke-6jegMsYM6CY-unsplash.jpg" class="d-block w-100" alt="...">
+            <img
+              src="../../assets/img/miles-burke-6jegMsYM6CY-unsplash.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
           </div>
           <div class="carousel-item">
-            <img src="../../assets/img/micheile-henderson-ZVprbBmT8QA-unsplash.jpg" class="d-block w-100" alt="...">
+            <img
+              src="../../assets/img/micheile-henderson-ZVprbBmT8QA-unsplash.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
           </div>
           <div class="carousel-item">
-            <img src="../../assets/img/andre-taissin-5OUMf1Mr5pU-unsplash.jpg" class="d-block w-100" alt="...">
+            <img
+              src="../../assets/img/andre-taissin-5OUMf1Mr5pU-unsplash.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -85,8 +158,8 @@
       <!-- App Features -->
       <div class="bg-light py-5">
         <div class="container-lg-6 py-5">
-          <div class="row-lg-6 mb-4">
-            <div class="col-lg-6 offset-4">
+          <div class="row-lg-6 mb-4 offset-5">
+            <div class="col-lg-6">
               <h2 class="display-4 font-weight-light">App Features</h2>
             </div>
           </div>
@@ -94,106 +167,182 @@
           <!-- Item -->
           <div class="row text-center justify-content-center">
             <div class="col-xl-3 col-sm-6 mb-5">
-              <div class="bg-white rounded shadow-sm py-5 px-4"><img src="" alt="" width="100" class="">
-                <h3 class="mb-0">Savings Challenges</h3><span class="small text-uppercase text-muted">These challenges are various ways to save money over a set period of time.</span> <br>
-                <span class="small text-uppercase text-muted">The 52 week challenge involves saving  a set amount of money each week for a year.</span> <br>
-                <span class="small text-uppercase text-muted">The 26 week challenge involves saving the same amount over a six-month period.</span>
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img src="" alt="" width="100" class="" />
+                <h3 class="mb-0">Savings Challenges</h3>
+                <span class="small text-uppercase text-muted"
+                  >These challenges are various ways to save money over a set
+                  period of time.</span
+                >
+                <br />
+                <span class="small text-uppercase text-muted"
+                  >The 52 week challenge involves saving a set amount of money
+                  each week for a year.</span
+                >
+                <br />
+                <span class="small text-uppercase text-muted"
+                  >The 26 week challenge involves saving the same amount over a
+                  six-month period.</span
+                >
               </div>
             </div>
             <!-- end -->
 
             <!-- Item-->
             <div class="col-xl-3 col-sm-6 mb-5">
-              <div class="bg-white rounded shadow-sm py-5 px-4"><img src="" alt="" width="100" class="">
-                <h3 class="mb-0">Expense Tracker</h3><span class="small text-uppercase text-muted">The Expese tracker provides a sense of accomplishment and satisfaction, which can further motivate users to continue saving.</span> <br>
-                <span class="small text-uppercase text-muted">Tracking savings progress can help users identify areas where they may be overspending or where they can cut back in order to save more. </span>
-
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img src="" alt="" width="100" class="" />
+                <h3 class="mb-0">Expense Tracker</h3>
+                <span class="small text-uppercase text-muted"
+                  >The Expese tracker provides a sense of accomplishment and
+                  satisfaction, which can further motivate users to continue
+                  saving.</span
+                >
+                <br />
+                <span class="small text-uppercase text-muted"
+                  >Tracking savings progress can help users identify areas where
+                  they may be overspending or where they can cut back in order
+                  to save more.
+                </span>
               </div>
             </div>
             <!-- End-->
 
             <!-- Item-->
             <div class="col-xl-3 col-sm-6 mb-5">
-              <div class="bg-white rounded shadow-sm py-5 px-4"><img src="" alt="" width="100" class="">
-                <h3 class="mb-0">Budget Tracker</h3><span class="small text-uppercase text-muted">The Budget Tracker helps users stay on track with their spending and saving goals.</span> <br>
-                <span class="small text-uppercase text-muted">Through this tool, users can develop better financial habits, reduce their debt, and ultimately build stronger financial stability.
+              <div class="bg-white rounded shadow-sm py-5 px-4">
+                <img src="" alt="" width="100" class="" />
+                <h3 class="mb-0">Budget Tracker</h3>
+                <span class="small text-uppercase text-muted"
+                  >The Budget Tracker helps users stay on track with their
+                  spending and saving goals.</span
+                >
+                <br />
+                <span class="small text-uppercase text-muted"
+                  >Through this tool, users can develop better financial habits,
+                  reduce their debt, and ultimately build stronger financial
+                  stability.
                 </span>
               </div>
             </div>
             <!-- End-->
-
-        </div>
-      </div>
-    </div>
-
-    <!-- How it Works -->
-    <div class="bg-light py-5">
-      <div class="container-lg-6 py-5">
-        <div class="row-lg-6 mb-4">
-          <div class="col-lg-5 offset-4">
-            <h2 class="display-4 font-weight-light">How it Works</h2>
           </div>
         </div>
-        <div class="row">
-          <!-- Item-->
-          <div class="row-xl-3 row-sm-6 row-lg-6 mb-5">
-              <span class="small text-uppercase text-muted">To get started with Alterna savings, first create an account</span> <br>
-              <span class="small text-uppercase text-muted">Use your account details to login and access your dashboard, from where you will have access to all our app features</span> <br>
-              <span class="small text-uppercase text-muted">From there, you can subscribe to any savings challenge between the 52-week challenge and the 26-week challenge</span> <br>
-              <span class="small text-uppercase text-muted">Additionally, you can use our budget tracker to plan and monitor your monthly, or yearly budgets as you please, or the expense tracker to monitor your spending patterns over a monthly or annual period.</span>
+      </div>
 
-              <button class="btn p-2 w-auto offset-5" (click)="GetStarted()">Get started</button>
-
+      <!-- How it Works -->
+      <div class="bg-light py-5">
+        <div class="container-lg-6 py-5">
+          <div class="row-lg-6 mb-4">
+            <div class="col-lg-5 offset-4">
+              <h2 class="display-4 font-weight-light">How it Works</h2>
+            </div>
           </div>
-          <!-- End-->
+          <div class="row">
+            <!-- Item-->
+            <div class="row-xl-3 row-sm-6 row-lg-6 mb-5">
+              <span class="small text-uppercase text-muted"
+                >To get started with Alterna savings, first create an
+                account</span
+              >
+              <br />
+              <span class="small text-uppercase text-muted"
+                >Use your account details to login and access your dashboard,
+                from where you will have access to all our app features</span
+              >
+              <br />
+              <span class="small text-uppercase text-muted"
+                >From there, you can subscribe to any savings challenge between
+                the 52-week challenge and the 26-week challenge</span
+              >
+              <br />
+              <span class="small text-uppercase text-muted"
+                >Additionally, you can use our budget tracker to plan and
+                monitor your monthly, or yearly budgets as you please, or the
+                expense tracker to monitor your spending patterns over a monthly
+                or annual period.</span
+              >
 
+              <button class="btn p-2 w-auto offset-5" (click)="GetStarted()">
+                Get started
+              </button>
+            </div>
+            <!-- End-->
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- footer -->
-  <div class="footer">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-collapse-bg-light">
-      <div class="container container-fluid">
-        <a class="navbar-brand" href="#"><p>&copy; 2023 All rights Reserved</p></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/portal">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/dashboard">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/about">About us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/contactus">Contact us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/login">Login</a>
-          </li>
-          </ul>
-          <ul class="bg-white rounded shadow-sm py-5 px-4 social mb-0 list-inline mt-3 img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-            <li class="list-inline-item"><a href="#" target="_blank" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-              <li class="list-inline-item"><a href="#" target="_blank" class="social-link"><i class="fa fa-twitter"></i></a></li>
-              <li class="list-inline-item"><a href="#" target="_blank" class="social-link"><i class="fa fa-instagram"></i></a></li>
-              <li class="list-inline-item"><a href="#" target="_blank" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-        </ul>
+      <!-- footer -->
+      <div class="footer">
+        <nav
+          class="navbar sticky-top navbar-expand-lg navbar-light bg-light navbar-collapse-bg-light"
+        >
+          <div class="container container-fluid">
+            <a class="navbar-brand" href="#"
+              ><p>&copy; 2023 All rights Reserved</p></a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/portal">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/about">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/contactus">Contact us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+              </ul>
+              <ul
+                class="bg-white rounded shadow-sm py-5 px-4 social mb-0 list-inline mt-3 img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
+              >
+                <li class="list-inline-item">
+                  <a href="#" target="_blank" class="social-link"
+                    ><i class="fa fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" target="_blank" class="social-link"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" target="_blank" class="social-link"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" target="_blank" class="social-link"
+                    ><i class="fa fa-linkedin"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
-      </div>
-    </nav>
-  </div>
-
     </section>
 
-
-  <!-- Add Bootstrap JS and jQuery links -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
+    <!-- Add Bootstrap JS and jQuery links -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
 </html>

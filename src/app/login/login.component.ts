@@ -55,16 +55,16 @@ export class LoginComponent {
   onLogin() {
     this.Loginservice.postData(this.loginObj).subscribe(
       (response: any) => {
-        if (!response.success) {
+        if (response.status!=='success') {
           alert('Invalid Details');
           return;
         }
 
-        const { email, phoneNumber } = response;
-        if (email !== this.loginObj.email || phoneNumber !== this.loginObj.phoneNumber) {
-          alert('Invalid Login');
-          return;
-        }
+        // const { email, phoneNumber } = response;
+        // if (email !== this.loginObj.email || phoneNumber !== this.loginObj.phoneNumber) {
+        //   alert('Invalid Login');
+        //   return;
+        // }
 
         this.router.navigate(['/dashboard']);
       },

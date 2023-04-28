@@ -16,3 +16,4 @@ export class PersonalDetailsService {
     return this.http.post<SignupResponse>(url, data);
   }
 }
+

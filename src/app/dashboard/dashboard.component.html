@@ -8,12 +8,152 @@
 </head>
 <body>
   <div class="container-fluid page">
-    <div class="d-flex page__box p-3 mt-2">Dashboard</div>
-    <div class="page__content shadow p-3 position-relative">
-      <div class="page__content-data position-absolute text-center">
-        Dashboard Content Goes Here
+    <div class="d-flex page__box mt-2">
+      <div class="row container-fluid">
+        <div class="d-flex page__box p-3">
+
+        </div>
+        <div class="aside-menu-wrapper col-2 page__content shadow p-3 position-relative h-auto">
+
+          <!-- alterna savings logo section -->
+          <div class="container">
+            <img src="../../assets/img/alterna_savings_logo.png" class="img-fluid"  alt="">
+          </div>
+
+          <!-- button links section -->
+          <div class="row btngoal">
+            <div class="btn goalsbtn mt-4" (click)="mygoal()"><img src="../../assets/img/Path.png" alt="pathpng">Goals</div>
+          </div>
+          <div class="row btnmilestone">
+            <div class="btn Milestonesbtn mt-4"><img src="../../assets/img/Path (2).png" alt="path2png">Milestones</div>
+          </div>
+          <div class="row btnportfolio">
+            <div class="btn Portfoliobtn mt-4"><img src="../../assets/img/Path.png" alt="pathpng">Portfolio</div>
+          </div>
+          <div class="row btnsettings">
+            <div class="btn Settingsbtn mt-4"><img src="../../assets/img/Path (2).png" alt="path2png">Settings</div>
+          </div>
+
+        </div>
+
+        <!-- dashboard content section -->
+        <div class="col page__content shadow p-3 position-relative h-auto">
+            <div class="row mt-2 page__content shadow p-1 position-relative container-fluid">
+              <div class="col-1">
+                <img src="../../assets/img/Custom.png" alt="custompng">
+              </div>
+              <div class="col">
+                <div class="row">
+                  <h1>Alterna Savings</h1>
+                  <p>Another day to grow your finance with us</p>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-2 page__content shadow p-3 position-relative h-auto container-fluid">
+              <div class="col-1">
+                <img src="../../assets/img/Avatar.png" alt="custompng">
+              </div>
+              <div class="col-auto">
+                <span class="container">Hello & Welcome </span><span class="Usertextcolor">Jane Doe</span>
+                <span><p class="container">Your last login was 27/04/2023 05:34:59pm</p></span>
+              </div>
+            </div>
+
+            <!-- All accounts section -->
+            <div class="row mt-2 page__content shadow p-3 position-relative h-auto">
+              <div class="col-3 mt-2 mb-2 rounded-pill">
+                <p class="container-fluid">Wallet Balance</p>
+                <p><strong class="container-fluid">$ 2000</strong></p>
+              </div>
+              <div class="col-auto">
+                <img src="../../assets/img/Home.png" alt=""><span class="">Load money</span>
+              </div>
+              <div class="col-auto left-col container-fluid">
+                <div class="row">
+                  <button class="btn rounded-pill" (click)="sendMoney()"> <img src="../../assets/img/Path.png" alt="img" >Send Money</button>
+                </div>
+                <div class="row mt-3">
+                  <button class="btn rounded-pill tracker" (click)="expenseTracker()"><img src="../../assets/img/Path (2).png" alt="img" >Expense Tracker</button>
+                </div>
+              </div>
+              <div class="col-auto right-col container-fluid">
+                <div class="row">
+                  <button class="btn rounded-pill p-1" (click)="requestMoney()"><img src="../../assets/img/Path.png" alt="img" >Request money</button>
+                </div>
+                <div class="row mt-3">
+                  <button class="btn rounded-pill budget" (click)="budgetTracker()"><img src="../../assets/img/Path (2).png" alt="img" >Budget Tracker</button>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-2 page__content shadow p-3 position-relative h-auto container-fluid">
+              <div class="col-7 activity page__content shadow position-relative h-auto container-fluid">
+                <div class="row container-fluid activity">
+                  <p><strong>Recent Activity</strong></p>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">Jan 12, 2:12 PM</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">Feb 12, 2:12 PM</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">March 12, 2:12 PM</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">April 12, 12:00 PM</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">May 12, 12:00 PM</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">June 12, 12:00 PM</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">July 12, 12:00 PM</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">August 12, 12:00 PM</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">September 12, 12:00</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">October 12, 12:00</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">November 12, 12:00</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+                <div class="row container-fluid p-1">
+                  <div class="col"><img src="../../assets/img/Profile Picture.png"><img src="../../assets/img/send_icon.png">December 12, 12:00</div>
+                  <div class="col offset-1"><strong class="text-success">+$100.00</strong></div>
+                </div>
+              </div>
+              <div class="col-4 offset-1 page__content shadow position-relative h-50 container-fluid">
+                <div class="row container-fluid report text-center">
+                  <p><strong class="report">Monthly Expenses Report</strong></p>
+                </div>
+                <div class="row container-fluid">
+                  <p class="values">Null</p>
+                </div>
+              </div>
+            </div>
+            <!-- end -->
+
+        </div>
       </div>
     </div>
-  </div>
+    </div>
+
 </body>
 </html>

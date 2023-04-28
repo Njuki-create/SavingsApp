@@ -27,6 +27,7 @@ import { SendmoneyComponent } from './sendmoney/sendmoney.component';
 import { RequestmoneyComponent } from './requestmoney/requestmoney.component';
 import { ExpensetrackerComponent } from './expensetracker/expensetracker.component';
 import { BudgettrackerComponent } from './budgettracker/budgettracker.component';
+import { GoalsComponent } from './goals/goals.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { BudgettrackerComponent } from './budgettracker/budgettracker.component'
     RequestmoneyComponent,
     ExpensetrackerComponent,
     BudgettrackerComponent,
+    GoalsComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +64,7 @@ import { BudgettrackerComponent } from './budgettracker/budgettracker.component'
     MatIconModule,
     MatDividerModule,
     MatListModule,
+
 
   ],
   providers: [],
