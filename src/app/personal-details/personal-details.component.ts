@@ -19,6 +19,8 @@ export class PersonalDetailsComponent {
   phoneNumber: string;
   confirmPhoneNumber: string;
   email: string;
+  pin: string;
+  confirmPin: string;
   previousFormDetails: {};
 
   constructor(private router: Router,
@@ -43,6 +45,8 @@ export class PersonalDetailsComponent {
       phoneNumber: this.phoneNumber,
       confirmPhoneNumber: this.confirmPhoneNumber,
       email: this.email,
+      pin: this.pin,
+      confirmPin: this.confirmPin,
     };
 
     postData = {...postData, ...this.previousFormDetails}
@@ -63,6 +67,8 @@ export class PersonalDetailsComponent {
         gender: response.data.gender,
         phoneNumber: response.data.phoneNumber,
         confirmPhoneNumber: response.data.confirmPhoneNumber,
+        pin: response.data.pin,
+        confirmPin: response.data.confirmPin,
       };
 
       console.log(userJson); // display the JSON object to the console

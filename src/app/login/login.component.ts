@@ -21,11 +21,12 @@ export class LoginComponent {
     Gender: '',
     phoneNumber: '',
     email: '',
+    pin: '',
 
   };
   loginObj = {
     phoneNumber: '',
-    email: '',
+    pin: '',
   }
 
   ngOnInit(): void {
@@ -48,6 +49,7 @@ export class LoginComponent {
       Gender: '',
       email: '',
       phoneNumber: '',
+      pin: '',
 
     };
   }
