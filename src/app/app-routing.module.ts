@@ -15,6 +15,7 @@ import { RequestmoneyComponent } from './requestmoney/requestmoney.component';
 import { ExpensetrackerComponent } from './expensetracker/expensetracker.component';
 import { BudgettrackerComponent } from './budgettracker/budgettracker.component';
 import { GoalsComponent } from './goals/goals.component';
+import { WeekchallengeComponent } from './weekchallenge/weekchallenge.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path: 'expensetracker', component: ExpensetrackerComponent},
   {path: 'budgettracker', component: BudgettrackerComponent},
   {path: 'goals', component: GoalsComponent},
+  {path: 'weekchallenge', component: WeekchallengeComponent},
   { path: 'account-details', component: AccountDetailsComponent },
   { path: 'personal-details', component: PersonalDetailsComponent },
   {path: 'securityquestion', component: SecurityquestionComponent},

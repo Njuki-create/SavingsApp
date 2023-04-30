@@ -29,4 +29,8 @@ export class DashboardComponent {
   mygoal() {
     this.router.navigate(['/goals']);
   }
+
+  weekChallenge(){
+    this.router.navigate(['/weekchallenge']);
+  }
 }

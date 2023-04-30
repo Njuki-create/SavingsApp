@@ -28,6 +28,7 @@ import { RequestmoneyComponent } from './requestmoney/requestmoney.component';
 import { ExpensetrackerComponent } from './expensetracker/expensetracker.component';
 import { BudgettrackerComponent } from './budgettracker/budgettracker.component';
 import { GoalsComponent } from './goals/goals.component';
+import { WeekchallengeComponent } from './weekchallenge/weekchallenge.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { GoalsComponent } from './goals/goals.component';
     ExpensetrackerComponent,
     BudgettrackerComponent,
     GoalsComponent,
+    WeekchallengeComponent,
   ],
   imports: [
     BrowserModule,
