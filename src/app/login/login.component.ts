@@ -3,18 +3,31 @@ import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { LoginService } from '../services/login.service';
 
+interface SignUpDetails {
+  fullname: string;
+  NationalIDnumber: string;
+  DateofBirth: string;
+  Gender: string;
+  phoneNumber: string;
+  email: string;
+  pin: string;
+}
+
+interface LoginDetails {
+  phoneNumber: string;
+  pin: string;
+}
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constructor(private router: Router, private Loginservice: LoginService){
-  }
-  //creating an array to store users
-  signupUsers: any[] =[];
-  //creating an object to store users' signup details
-  signupObj = {
+  constructor(private router: Router, private loginservice: LoginService) {}
+
+  // creating an object to store users' signup details
+  signupObj: SignUpDetails = {
     fullname: '',
     NationalIDnumber: '',
     DateofBirth: '',
@@ -22,26 +35,27 @@ export class LoginComponent {
     phoneNumber: '',
     email: '',
     pin: '',
-
   };
-  loginObj = {
+
+  loginObj: LoginDetails = {
     phoneNumber: '',
     pin: '',
-  }
+  };
 
   ngOnInit(): void {
     const localData = localStorage.getItem('signupUsers');
-    if(localData != null) {
-      this.signupUsers=JSON.parse(localData);
+    if (localData != null) {
+      this.signupObj = JSON.parse(localData);
     }
-
   }
+
   onSignUp() {
     this.router.navigate(['/account-details']);
-    //pushing the signupUsers to the object Array
-    this.signupUsers.push(this.signupObj);
-    //storing the array in the localStorage and converting the data into string
-    localStorage.setItem('signupUsers', JSON.stringify(this.signupUsers));
+    // pushing the signupObj to the JSON Array
+    const signupUsers = JSON.parse(localStorage.getItem('signupUsers') || '[]');
+    signupUsers.push(this.signupObj);
+    // storing the JSON Array in the local storage and converting data into string
+    localStorage.setItem('signupUsers', JSON.stringify(signupUsers));
     this.signupObj = {
       fullname: '',
       NationalIDnumber: '',
@@ -50,27 +64,25 @@ export class LoginComponent {
       email: '',
       phoneNumber: '',
       pin: '',
-
     };
   }
 
   onLogin() {
-    this.Loginservice.postData(this.loginObj).subscribe(
-      (response: any) => {
-        if (response.status!=='success') {
+    this.loginservice.postData(this.loginObj).subscribe(
+      ({ pin, phoneNumber, status }: { pin: string, phoneNumber: string, status: string }) => {
+        if (status !== 'success') {
           alert('Invalid Details');
           return;
         }
 
-        // const { email, phoneNumber } = response;
-        // if (email !== this.loginObj.email || phoneNumber !== this.loginObj.phoneNumber) {
-        //   alert('Invalid Login');
-        //   return;
-        // }
+        if (pin !== this.loginObj.pin || phoneNumber !== this.loginObj.phoneNumber) {
+          alert('Invalid Login');
+          return;
+        }
 
         this.router.navigate(['/dashboard']);
       },
-      (error: any) => {
+      error => {
         console.error(error);
         alert('An error occurred while logging in. Please try again later.');
       }
